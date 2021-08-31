@@ -10,7 +10,7 @@ public class Client {
 
     public final static int SOCKET_PORT = 5000;
     public final static String SERVER = "127.0.0.1";
-    public final static String FILE_TO_RECEIVED = "files\\ale1500out.txt";
+    public final static String FILE_TO_RECEIVED = "recebidas\\file 1000.txt";
     public final static int FILE_SIZE = 6022386;
 
     public static void main(String[] args) throws IOException {
@@ -33,7 +33,7 @@ public class Client {
 
             do {
                 bytesRead = is.read(mybytearray, current, (mybytearray.length - current));
-                if (bytesRead >= 0) current += bytesRead;
+                if (bytesRead >= 0) current++;
             } while (bytesRead > -1);
 
             bos.write(mybytearray, 0, current);
